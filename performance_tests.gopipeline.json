@@ -1,28 +1,30 @@
 {
   "format_version" : 1,
-  "name": "build_test",
+  "name": "performance_tests",
   "environment_variables": [
     {
       "name": "TEST_NUM"
     }
-                           ],
+  ],
   "group" : "Build_and_Deploy",
   "materials": [
     {
-      "url": "ssh://git@stash.prod.icd:7999/msa/cicd-product.git",
-      "type": "git"
+      "pipeline": "build_test",
+      "stage": "build_test_build_stage",
+      "name": "dependency_2",
+      "type": "dependency"
     }
   ],
   "stages": [
     {
-      "name": "build_test_build_stage",
+      "name": "performance_tests_build_stage",
       "fetch_materials": true,
       "never_cleanup_artifacts": false,
       "clean_working_directory": false,
       "environment_variables": [],
       "jobs": [
         {
-          "name": "build_test_job",
+          "name": "performance_tests_build_job",
           "environment_variables": [],
           "tabs": [],
           "resources": [],
@@ -41,3 +43,4 @@
     }
   ]
 }
+
