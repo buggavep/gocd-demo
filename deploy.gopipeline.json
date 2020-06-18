@@ -1,6 +1,6 @@
 {
   "format_version": 1,
-  "name": "deploy2",
+  "name": "deploy",
   "environment_variables": [
     {
       "name": "TEST_NUM"
@@ -9,13 +9,13 @@
   "group": "Build_and_Deploy",
   "materials": [
     {
-      "pipeline": "acceptance_tests2",
+      "pipeline": "acceptance_tests",
       "stage": "acceptance_tests_build_stage",
       "name": "dependency_3",
       "type": "dependency"
     },
     {
-      "pipeline": "performance_tests2",
+      "pipeline": "performance_tests",
       "stage": "performance_tests_build_stage",
       "name": "dependency_4",
       "type": "dependency"
@@ -48,7 +48,7 @@
       ]
     },
     {
-      "name": "deploy_stage2",
+      "name": "deploy_stage",
       "fetch_materials": true,
       "never_cleanup_artifacts": false,
       "clean_working_directory": false,
