@@ -6,7 +6,7 @@
       "name": "TEST_NUM"
     }
                            ],
-  "group" : "Build_and_Deploy",
+  "group" : "Build_and_Deploy_Test",
   "materials": [
     {
       "url": "https://github.com/buggavep/gocd-demo.git",
